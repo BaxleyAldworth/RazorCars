@@ -245,6 +245,14 @@
     <Compile Include="Migrations\201512212153257_InventoryStore.Designer.cs">
       <DependentUpon>201512212153257_InventoryStore.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512212300367_CheckInDate.cs" />
+    <Compile Include="Migrations\201512212300367_CheckInDate.Designer.cs">
+      <DependentUpon>201512212300367_CheckInDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512212305161_RemovedRentalHistorySupply.cs" />
+    <Compile Include="Migrations\201512212305161_RemovedRentalHistorySupply.Designer.cs">
+      <DependentUpon>201512212305161_RemovedRentalHistorySupply.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -341,6 +349,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512212153257_InventoryStore.resx">
       <DependentUpon>201512212153257_InventoryStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512212300367_CheckInDate.resx">
+      <DependentUpon>201512212300367_CheckInDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512212305161_RemovedRentalHistorySupply.resx">
+      <DependentUpon>201512212305161_RemovedRentalHistorySupply.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -16,6 +16,26 @@ namespace RazorCars.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        [Route("api/inventories/rentalhistory/{id}")]
+        [HttpGet]
+        public IHttpActionResult RentalHistory(int id)
+        {
+            var inventory = db.Inventories.Find(id);
+
+            var model = new InventoryVM()
+            {
+                StoreName = inventory.Store.Name,
+                CarName = $"{inventory.CarType.ModelYear} {inventory.CarType.Manufacturer} {inventory.CarType.CarModel}",
+                TotalSupply = inventory.TotalSupply,
+                AvailableSupply = inventory.TotalSupply - inventory.Histories.Count(x=>x.CheckInDate == null),
+                RentalHistoryIDs = inventory.Histories.Select(x => x.ID).ToList()
+            };
+
+            return Ok(model);
+
+            
+        }
+
         // GET: api/Inventories
         public IHttpActionResult GetInventories()
         {
