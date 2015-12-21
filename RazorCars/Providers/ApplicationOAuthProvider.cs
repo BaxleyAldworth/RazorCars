@@ -31,7 +31,7 @@ namespace RazorCars.Providers
         {
             var userManager = context.OwinContext.GetUserManager<ApplicationUserManager>();
 
-            ApplicationUser user = await userManager.FindAsync(context.UserName, context.Password);
+            Employee user = await userManager.FindAsync(context.UserName, context.Password);
 
             if (user == null)
             {

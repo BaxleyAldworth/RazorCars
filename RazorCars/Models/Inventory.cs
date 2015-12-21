@@ -11,6 +11,6 @@ namespace RazorCars.Models
         public int AvailableForRent { get; set; }
         public DateTime CheckOutDate { get; set; }
         public bool IsReturn { get; set; }
-        public virtual List<Car> ListofCars { get; set; }
+        public virtual Car CarType { get; set; }
     }
 }
