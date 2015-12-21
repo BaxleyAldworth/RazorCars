@@ -219,6 +219,10 @@
     <Compile Include="Migrations\201512211813209_ModelsCreated.Designer.cs">
       <DependentUpon>201512211813209_ModelsCreated.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512212038300_RentalHistoryAdded.cs" />
+    <Compile Include="Migrations\201512212038300_RentalHistoryAdded.Designer.cs">
+      <DependentUpon>201512212038300_RentalHistoryAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -306,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512211813209_ModelsCreated.resx">
       <DependentUpon>201512211813209_ModelsCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512212038300_RentalHistoryAdded.resx">
+      <DependentUpon>201512212038300_RentalHistoryAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
