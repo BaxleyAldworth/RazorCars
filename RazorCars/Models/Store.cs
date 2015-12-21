@@ -9,6 +9,7 @@ namespace RazorCars.Models
     {
         public int StoreID { get; set; }
         public ICollection<Employee> Employees { get; set; }
+        public ICollection<Inventory> Inventory { get; set; }
 
     }
 }

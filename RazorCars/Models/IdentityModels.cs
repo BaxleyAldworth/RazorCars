@@ -9,7 +9,8 @@ namespace RazorCars.Models
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class Employee : IdentityUser
     {
-        public Store StoreID { get; set;}
+        public virtual Store Store { get; set;}
+        //user.store.inventory
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<Employee> manager, string authenticationType)
         {
