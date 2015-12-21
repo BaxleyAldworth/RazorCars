@@ -8,8 +8,8 @@ namespace RazorCars.Models
     public class Store
     {
         public int StoreID { get; set; }
-        public ICollection<Employee> Employees { get; set; }
-        public ICollection<Inventory> Inventory { get; set; }
+        public virtual ICollection<Employee> Employees { get; set; }
+        public virtual ICollection<Inventory> Inventory { get; set; }
 
     }
 }

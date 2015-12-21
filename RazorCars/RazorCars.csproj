@@ -225,6 +225,8 @@
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Inventory.cs" />
+    <Compile Include="Models\InventoryVM.cs" />
+    <Compile Include="Models\RentalHistory.cs" />
     <Compile Include="Models\Store.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
