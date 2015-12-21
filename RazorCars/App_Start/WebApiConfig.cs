@@ -5,6 +5,8 @@ using System.Net.Http;
 using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
+using Newtonsoft.Json;
+using System.Web.Http.Cors;
 
 namespace RazorCars
 {
@@ -12,6 +14,16 @@ namespace RazorCars
     {
         public static void Register(HttpConfiguration config)
         {
+
+            // Web API configuration and services
+            var cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
+
+            var formatters = GlobalConfiguration.Configuration.Formatters;
+            formatters.Insert(0, new EmberJsonMediaTypeFormatter());
+            var jsonFormatter = formatters.OfType<EmberJsonMediaTypeFormatter>().First();
+            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            jsonFormatter.SerializerSettings.Re‌​ferenceLoopHandling = ReferenceLoopHandling.Ignore;
             // Web API configuration and services
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();

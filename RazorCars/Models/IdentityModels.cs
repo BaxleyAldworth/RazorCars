@@ -32,5 +32,7 @@ namespace RazorCars.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<RazorCars.Models.Inventory> Inventories { get; set; }
     }
 }
