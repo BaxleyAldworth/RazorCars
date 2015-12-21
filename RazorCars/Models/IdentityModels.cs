@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using System.Data.Entity;
 
 namespace RazorCars.Models
 {
@@ -33,6 +34,8 @@ namespace RazorCars.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<RazorCars.Models.Inventory> Inventories { get; set; }
+        public DbSet<Store> Stores { get; set; }
+        public DbSet<Inventory> Inventories { get; set; }
+        public DbSet<Car> Cars { get; set; }
     }
 }

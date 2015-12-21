@@ -11,5 +11,7 @@ namespace RazorCars.Models
         public virtual ICollection<Employee> Employees { get; set; }
         public virtual ICollection<Inventory> Inventory { get; set; }
 
+        public string Name { get; set; }
+
     }
 }
