@@ -12,5 +12,6 @@ namespace RazorCars.Models
         public int AvailableForRent { get; set; }
         public DateTime CheckOutDate { get; set; }
         public bool IsReturned { get; set; }
+        public virtual Inventory Inventory { get; set; }
     }
 }

@@ -17,9 +17,9 @@ namespace RazorCars.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/Inventories
-        public IQueryable<Inventory> GetInventories()
+        public IHttpActionResult GetInventories()
         {
-            return db.Inventories;
+            return Ok(db.Inventories.ToList());
         }
 
         // GET: api/Inventories/5

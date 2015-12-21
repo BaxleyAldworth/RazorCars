@@ -43,12 +43,7 @@ namespace RazorCars.Migrations
             var store = new Store() { Name = "Store 2286" };
             var store2 = new Store() { Name = "Store 1144" };
 
-
-
             context.Stores.AddOrUpdate(x => x.Name, store, store2);
-
-            var user = context.Users.Where(x => x.Email == "test@theironyard.com").FirstOrDefault();
-            user.Store = store;
 
             context.Cars.AddOrUpdate(x => new { x.ModelYear, x.Manufacturer, x.CarModel },
                 new Car { ModelYear = "2015", Manufacturer = "Ford", CarModel = "Explorer" }

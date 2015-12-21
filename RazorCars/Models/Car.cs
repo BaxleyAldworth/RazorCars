@@ -7,10 +7,15 @@ namespace RazorCars.Models
 {
     public class Car
     {
+        public Car()
+        {
+            Inventories = new List<Inventory>();
+        }
         public int ID { get; set; }
         public string ModelYear { get; set; }
         public string Manufacturer { get; set;  }
         public string CarModel { get; set; }
+        public virtual ICollection<Inventory> Inventories { get; set;}
         //public virtual ICollection<Inventory>
 
         //inventory goes to one car, car can have many inventories
